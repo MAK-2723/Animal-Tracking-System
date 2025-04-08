@@ -1,0 +1,38 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+      <a href="#" onclick="logout()">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Dashboard</h1>
+    <section>
+      <canvas id="categoryChart" width="400" height="200"></canvas>
+    </section>
+    <section>
+      <canvas id="locationChart" width="400" height="200"></canvas>
+    </section>
+    <section>
+      <h2>Recent Alerts</h2>
+      <ul id="alertList">Loading alerts...</ul>
+    </section>
+    <div id="dataDisplay">Loading data...</div>
+  </main>
+
+  <script defer src="static/js/dashboard.js"></script>
+</body>
+</html>
