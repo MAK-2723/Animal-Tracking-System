@@ -1,0 +1,9 @@
+flask==2.2.3
+pymongo==4.3.3
+opencv-python==4.8.0.76
+torch==2.1.0
+ultralytics==8.0.43
+twilio==8.4.0
+werkzeug==2.2.3
+pyjwt==2.6.0
+dotenv==0.21.1
