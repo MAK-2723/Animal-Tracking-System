@@ -3,11 +3,8 @@ from ultralytics import YOLO
 import cv2
 import numpy as np
 import os
-from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
-MODEL_PATH = os.getenv("YOLO_MODEL_PATH", "models/best.pt")
+MODEL_PATH = "models/best.pt"
 
 # Load YOLO model
 def load_model(model_path=MODEL_PATH):
