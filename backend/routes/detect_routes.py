@@ -12,7 +12,7 @@ detect_bp = Blueprint("detect_bp", __name__)
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-MODEL_PATH=os.getenv("animal-tracking-system/backend/models","yolov8.pt")
+MODEL_PATH=os.getenv("animal-tracking-system/backend/models","models/best.pt")
 model=load_model(MODEL_PATH)
 
 @detect_bp.route("/detect", methods=["POST"])
