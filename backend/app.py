@@ -7,12 +7,8 @@ from routes.dashboard_routes import dashboard_bp
 import config
 import os
 from database.db import initialize_db
-from dotenv import load_dotenv
 from camera_feed import CameraStream
 from detection import load_model
-
-#Load environment variables
-load_dotenv()
 
 app = Flask(__name__,static_folder="animal-tracking-system/frontend/static",template_folder="animal-tracking-system/frontend")
 CORS(app,resources={r"/api/*":{"origins":"*"}})
@@ -21,7 +17,7 @@ CORS(app,resources={r"/api/*":{"origins":"*"}})
 app.config.from_object(config)
 
 #Load YOLO model
-MODEL_PATH=os.getenv("animal-tracking-system/backend/models","models/best.pt")
+MODEL_PATH="models/best.pt"
 model=load_model(MODEL_PATH)
 
 #Start camera stream
