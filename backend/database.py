@@ -1,11 +1,7 @@
 from pymongo import MongoClient
 import os
-from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
-
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/animal_tracking")
+MONGO_URI = "mongodb://localhost:27017/animal_tracking"
 
 class Database:
     """Handles MongoDB operations for storing and retrieving detections."""
