@@ -14,14 +14,14 @@ from detection import load_model
 #Load environment variables
 load_dotenv()
 
-app = Flask(__name__,static_folder="animal-tracking-system/frontend-s/static",template_folder="animal-tracking-system/frontend-s")
+app = Flask(__name__,static_folder="animal-tracking-system/frontend/static",template_folder="animal-tracking-system/frontend")
 CORS(app,resources={r"/api/*":{"origins":"*"}})
 
 # Load configuration
 app.config.from_object(config)
 
 #Load YOLO model
-MODEL_PATH=os.getenv("animal-tracking-system/backend/models","yolov8.pt")
+MODEL_PATH=os.getenv("animal-tracking-system/backend/models","models/best.pt")
 model=load_model(MODEL_PATH)
 
 #Start camera stream
